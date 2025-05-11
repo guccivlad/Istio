@@ -6,6 +6,7 @@ cd istio-*
 export PATH=$PWD/bin:$PATH
 istioctl install -y
 kubectl label namespace default istio-injection=enabled
+cd ..
 
 eval $(minikube docker-env)
 docker build -t server:v1.0 .
